@@ -19,6 +19,7 @@ public class ExtentReportManager {
 		report.config().setDocumentTitle("Flipkart Automation Report");
 		report.config().setTheme(Theme.DARK);
 		report.config().setOfflineMode(true);
+		report.config().setEncoding("utf-8");
 		
 		extent = new ExtentReports();
 		extent.attachReporter(report);
