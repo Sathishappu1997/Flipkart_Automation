@@ -18,6 +18,7 @@ public class ExtentReportManager {
 		report.config().setReportName("Regression Test Report");
 		report.config().setDocumentTitle("Flipkart Automation Report");
 		report.config().setTheme(Theme.DARK);
+		report.config().setOfflineMode(true);
 		
 		extent = new ExtentReports();
 		extent.attachReporter(report);
