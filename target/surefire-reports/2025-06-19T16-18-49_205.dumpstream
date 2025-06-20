@@ -1,0 +1,5 @@
+# Created at 2025-06-19T16:18:49.585
+Boot Manifest-JAR contains absolute paths in classpath 'D:\eclipse workspace\Flipkart_Framework_FITA_Weekend_Batch\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
