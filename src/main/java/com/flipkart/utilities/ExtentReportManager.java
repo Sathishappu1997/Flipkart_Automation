@@ -3,6 +3,7 @@ package com.flipkart.utilities;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.flipkart.constant.ConstantVariables;
@@ -31,7 +32,7 @@ public class ExtentReportManager {
 	}
 	
 	public static void markPassAndAddScreenshot(ExtentTest test, String message) {
-		test.pass(message);
+		test.log(Status.PASS, message);
 		test.info(MediaEntityBuilder.createScreenCaptureFromBase64String(ReusableMethods.takeScreenshotUsingBase64(), message).build());
 		System.out.println(message);
 	}

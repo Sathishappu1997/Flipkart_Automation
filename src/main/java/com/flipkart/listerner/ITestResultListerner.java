@@ -5,6 +5,7 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.Status;
 import com.flipkart.utilities.ExtentReportManager;
 import com.flipkart.utilities.ReusableMethods;
 
@@ -15,7 +16,7 @@ public class ITestResultListerner implements ITestListener {
 	}
 
 	public void onTestFailure(ITestResult result) {
-		ExtentReportManager.test.fail(MediaEntityBuilder.createScreenCaptureFromBase64String(ReusableMethods.takeScreenshotUsingBase64()).build());
+		ExtentReportManager.test.log(Status.FAIL ,MediaEntityBuilder.createScreenCaptureFromBase64String(ReusableMethods.takeScreenshotUsingBase64()).build());
 		ExtentReportManager.test.info(result.getThrowable());
 	}
 
