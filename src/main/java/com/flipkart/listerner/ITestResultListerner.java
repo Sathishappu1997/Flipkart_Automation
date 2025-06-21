@@ -13,6 +13,9 @@ public class ITestResultListerner implements ITestListener {
 
 	public void onTestSuccess(ITestResult result) {
 		System.out.println("Test case are Passed for "+result.getMethod().getMethodName());
+		ExtentReportManager.test.log(Status.PASS, "Test case passed: " + result.getMethod().getMethodName());
+	    ExtentReportManager.test.pass("Final screenshot on success", MediaEntityBuilder.createScreenCaptureFromBase64String(ReusableMethods.takeScreenshotUsingBase64()).build()
+	    );
 	}
 
 	public void onTestFailure(ITestResult result) {
