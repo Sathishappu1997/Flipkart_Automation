@@ -8,7 +8,7 @@
     <classes>
       <class name="com.flipkart.testcases.TC01HomePage">
         <methods>
-          <include name="searchProduct" invocation-numbers="1"/>
+          <include name="searchProduct" invocation-numbers="0 1 2"/>
           <include name="startBrowser"/>
           <include name="quiteBrowser"/>
         </methods>
